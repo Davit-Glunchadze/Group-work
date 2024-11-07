@@ -207,7 +207,11 @@ header {
   padding: 7px 25px;
 }
 .topics-section h3{
-  margin-left: 300px;
+  max-width: 1272px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  font-size: 32px;
+  font-weight: 700;
 }
 /*ტოპიკების დამთავრება*/
 /* ფოტოს მეინის დაწყება*/
