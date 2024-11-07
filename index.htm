@@ -22,7 +22,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <!--საიტის ლოგო-->
+      <a class="logo" href="#"
+        ><img src="./Assets/images/logo.svg" alt="logo"
+      /></a>
+      <!-- ბურგერის მენიუს ღილაკი -->
+      <div class="burger-menu" onclick="togglemenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- ჰედერის ნავიგაცია -->
+      <nav class="header-navigation">
+        <ul>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#">Spiritual</a></li>
+          <li><a href="#">Mental Health</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <!-- საძიებო ველი -->
+      <div class="search-form" id="searchForm">
+        <form action="/search" method="get">
+          <input type="text" name="query" placeholder="Search..." />
+        </form>
+      </div>
+      <!-- საძიებო ხატულა -->
+      <button class="search-button">
+        <img src="./Assets/images/search.svg" alt="search icon" />
+      </button>
+    </header>
+    <!--ჰედერის დასასრული-->
     <main>
       <section class="main-section"></section>
       <section class="topics-section"></section>
@@ -31,5 +63,6 @@
       <section class="cards-section"></section>
     </main>
     <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>
