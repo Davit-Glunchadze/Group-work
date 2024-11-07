@@ -8,3 +8,151 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
 }
+
+/* ჰედერი*/
+header {
+  max-width: 1272px;
+  margin: 37px auto 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*ჰედერის ნავიგაცია */
+.header-navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-navigation {
+  margin-left: 235px;
+}
+
+.header-navigation ul li {
+  padding: 7px 25px 7px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header-navigation ul li a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.header-navigation ul li:hover {
+  border-radius: 40px;
+  background-color: #4ce0d7;
+  transition: 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*საძიებო ველი */
+.search-button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding-bottom: 5px;
+}
+
+.search-button :hover {
+  background-color: #4ce0d7;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 25px;
+}
+
+/* ბურგერის ღილაკი */
+.burger-menu {
+  display: none; /* დიდი ეკრანებისთვის დამალულია */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  width: 30px;
+  height: 3px;
+  background: #262626;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ჰედერი მცირე ეკრანებისთვის */
+@media (max-width: 768px) {
+  header {
+    max-width: 700px;
+  }
+  .burger-menu {
+    display: flex; /* პატარა ეკრანებზე ბურგერის ღილაკი გამოჩნდება */
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+
+  .header-navigation ul {
+    display: none; /* ნავიგაცია დამალულია */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 270px;
+    background: url(./Assets/images/logo.svg) center top 40px;
+    background-repeat: no-repeat;
+    background-color: #4ce0d7;
+    border-radius: 0 20px 0 0;
+  }
+
+  .header-navigation ul.show {
+    display: flex; /* მენიუ გამოჩნდება ღილაკზე დაჭერისას */
+  }
+
+  .header-navigation ul li {
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .header-navigation ul li:first-child {
+    margin-top: 110px;
+  }
+
+  .header-navigation ul li:hover {
+    background: none;
+    transform: scale(1.1);
+    transition: 0.4s;
+    text-decoration: underline 2px #262626;
+    text-underline-offset: 10px;
+  }
+}
+
+/* საძიებო ველის სტილები */
+.search-form {
+  display: none; /* საძიებო ველი დამალულია */
+  position: relative;
+  right: 0;
+  padding: 3px;
+  border: 1px solid #5c5c5c;
+  border-radius: 4px;
+  background-color: #4ce0d7;
+  margin: 0 15px 5px 0;
+}
+
+.search-form input {
+  width: 125px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.search-form.show {
+  display: block;
+}
