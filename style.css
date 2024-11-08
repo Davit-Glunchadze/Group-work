@@ -419,7 +419,7 @@ header {
 }
 
 .fashion-photo {
-  background: url(/Assets/images/fashion-section-main-photo.png);
+  background: url(Assets/images/fashion-section-main-photo.png);
   max-width: 1204px;
   height: 360.3px;
   margin: 0 auto 24px;
