@@ -309,13 +309,13 @@ header {
   cursor: pointer;
 }
 
-.background-photo {
+.card-background-photo {
   position: relative;
   max-width: 547px;
   height: 367.41px;
 }
 
-.background-photo > img {
+.card-background-photo > img {
   height: 100%;
   width: 100%;
   border-radius: 20px;
@@ -579,6 +579,154 @@ header {
   padding: 13px 14px 13px 0;
 }
 
+.box-content{
+  display: flex;
+  flex-direction: row;
+  
+}
+/*აქ დაიწყო ტრენდინგ სექცია*/
+.trending-text {
+  display: flex;
+  max-width: 1204px;
+  justify-content: start;
+  margin: 0 auto;
+  margin-bottom: 55px;
+
+}
+.trending-text h2{
+font-size: 32px;
+font-weight: 700;
+line-height: 48px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.trending1{
+  display: flex;
+  margin: 0 auto;
+  max-width: 1204px;
+  gap: 60px;
+}
+.main-trending1, 
+.main-trending2{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 20px ;
+  box-shadow:  0px 6px 6px  0px #0000000d;
+  margin-bottom: 88.2px;
+}
+.card-trending1{
+  
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 579.02px;
+  height: 278.09px;
+
+}
+.card-trending2{
+  
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 565px;
+  height: 278.09px;
+
+}
+.a-button1 > a,
+.a-button2 > a
+{
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+.a-button1,
+.a-button2{
+  background-color: #262626;
+  padding: 9px 49px;
+  border-radius: 40px;
+  margin: 20px 0px  0 34px;
+  
+}
+.a-button1:hover,
+.a-button2:hover{
+  transform: scale(1.1);
+
+  
+}
+
+
+.card-trending1{
+  background-image: url(Assets/images/photo1.png);
+  margin-bottom: 23px;
+}
+.card-trending2{
+  background-image: url(Assets/images/photo4.png);
+  margin-bottom: 23px;
+
+}
+.trending-card1,
+.trending-card2{
+  max-width: 448px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 34px;
+  margin-bottom: 20px;
+}
+.trending-card1 > img,
+.trending-card2 > img{
+  width: 65.67px;
+  height: 50.77px;
+
+}
+.trending-card1 > p,
+.trending-card2 > p{
+  width: 169px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #bcbcbc;
+}
+.trending-content1,
+.trending-content2{
+ max-width: 354px;
+ margin-left: 34px;
+ margin-bottom: 20px;
+ 
+} 
+.trending-button1,
+.trending-button2{
+  display: flex;
+  text-decoration: none;
+  background-color: #ffffff;
+  max-width: 132px;
+  align-items: center;
+  margin-left: 34px;
+  margin-bottom: 20px;
+
+}
+.trending-button1 > a,
+.trending-button2 > a{
+text-decoration: none;
+color: #4ce0d7;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+padding-left: 16px;
+align-items: center;
+
+}
+
+
+
+
+
+
+
 /*fashion-content სტილები შემცირებული ეკრანისათვის*/
 
 @media (max-width: 768px) {
@@ -595,6 +743,7 @@ header {
     justify-content: space-around;
   }
 }
+
 /*ფუთერის დასაწყისი*/
 footer {
   max-width: 1440px;
@@ -642,3 +791,6 @@ footer span {
   font-size: 14px;
   line-height: 21px;
 }
+
+
+
