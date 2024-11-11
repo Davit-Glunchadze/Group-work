@@ -8,3 +8,63 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
 }
+
+footer {
+  max-width: 1440px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 20px 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  max-width: 1267px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 87px;
+}
+
+.hang-out {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+
+.lets-hang {
+  margin-right: 43px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+footer span {
+  display: flex;
+  max-width: 1267px;
+  height: 1px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  color: #bcbcbc;
+  border: solid 1px;
+  margin-top: 77px;
+}
+
+.email {
+  display: flex;
+  max-width: 1267px;
+  margin: 0 auto;
+  padding-bottom: 34px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover,
+.youtube:hover,
+.instagram:hover {
+  transform: scale(1.2)
+}
