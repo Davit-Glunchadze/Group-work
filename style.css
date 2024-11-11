@@ -861,3 +861,11 @@ footer span {
   font-size: 14px;
   line-height: 21px;
 }
+
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover,
+.youtube:hover,
+.instagram:hover {
+  transform: scale(1.2)
+}
