@@ -8,3 +8,864 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
 }
+
+/* ჰედერი*/
+header {
+  max-width: 1273px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: sticky; /* სტიკი ჰედერი საიტისათვის*/
+  top: 0;
+  background-color: #f9f9f9;
+  z-index: 1000;
+  padding: 37px 0 17px;
+}
+
+/* ლოგოს სტილები-მოერგება მცირე ეკრანს-შეინარჩუნებს პროპორციებს */
+.logo {
+  max-width: 100%;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/*ჰედერის ნავიგაცია */
+.header-navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-navigation {
+  margin-left: 235px;
+}
+
+.header-navigation ul li {
+  padding: 7px 25px 7px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header-navigation ul li a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.header-navigation ul li:hover {
+  border-radius: 40px;
+  background-color: #4ce0d7;
+  transition: 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*საძიებო ველი */
+.search-button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding-bottom: 5px;
+}
+
+.search-button :hover {
+  background-color: #4ce0d7;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 25px;
+}
+
+/* ბურგერის ღილაკი */
+.burger-menu {
+  display: none; /* დიდი ეკრანებისთვის დაიმალება */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  width: 30px;
+  height: 3px;
+  background: #262626;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ჰედერი მცირე ეკრანებისთვის */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px 10px;
+    margin: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .header-navigation {
+    margin: 0;
+  }
+
+  .burger-menu {
+    display: flex; /* პატარა ეკრანებზე ბურგერის ღილაკი გამოჩნდება */
+    margin: auto;
+    margin-bottom: 13px;
+  }
+
+  .header-navigation ul {
+    display: none; /* ნავიგაცია დამალულია */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 230px;
+    background: url(./Assets/images/logo.svg) center top 40px;
+    background-size: 180px;
+    background-repeat: no-repeat;
+    background-color: #4ce0d7;
+    border-radius: 0 20px 0 0;
+    z-index: 1000;
+  }
+
+  .header-navigation ul.show {
+    display: flex; /* მენიუ გამოჩნდება ღილაკზე დაჭერისას */
+  }
+
+  .header-navigation ul li {
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .header-navigation ul li:first-child {
+    margin-top: 110px;
+  }
+
+  .header-navigation ul li:hover {
+    background: none;
+    transform: scale(1.1);
+    transition: 0.4s;
+    text-decoration: underline 2px #262626;
+    text-underline-offset: 10px;
+  }
+}
+
+/* საძიებო ველის სტილები */
+.search-form {
+  display: none; /* საძიებო ველი დამალულია */
+  position: relative;
+  right: 0;
+  padding: 3px;
+  border: 1px solid #5c5c5c;
+  border-radius: 20px;
+  background-color: #4ce0d7;
+  margin: 0 15px 5px 0;
+}
+
+.search-form input {
+  width: 125px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.search-form.show {
+  display: block;
+}
+
+/*დაწყება ტოპიკების*/
+.topic-card > h3 {
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 32px;
+  margin-bottom: 48px;
+  margin-left: 300px;
+}
+
+.topic {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 87.5px;
+}
+
+.topic-inner {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 204px;
+  height: 291px;
+  gap: 10px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-inner h4 {
+  width: 129px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.topic-inner img {
+  width: 88px;
+  height: 88px;
+}
+
+.topic-inner a {
+  color: black;
+  text-decoration: none;
+}
+
+.button:hover {
+  border-radius: 40px;
+  background-color: #4ce0d7;
+  transition: 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.button {
+  padding: 7px 25px;
+}
+
+.topics-section h3 {
+  max-width: 1272px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/*ტოპიკების დამთავრება*/
+/* ფოტოს მეინის დაწყება*/
+.inner-main {
+  background-image: url(Assets/images/woman1.png);
+  height: 559px;
+  width: 1272px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  margin: 84px auto 84px;
+  margin-top: 62px;
+  padding-left: 57px;
+  padding-top: 218px;
+  gap: 23px;
+}
+
+.p2 {
+  color: white;
+  font-weight: 400px;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 19px;
+  max-width: 490px;
+}
+
+.p1 {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 22px;
+}
+
+.inner-main h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 69px;
+}
+
+.color {
+  background-image: linear-gradient(90deg, #4ce0d7 43.06%, #8ba9f4 100%);
+  color: transparent;
+  background-clip: text;
+}
+/*ფოტოს მეინის დამთავრება*/
+
+/*ქარდების სექციის გასტილვა*/
+
+.card-content {
+  gap: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.card-button {
+  background-color: #262626;
+  border-radius: 40px;
+  width: 175.44px;
+  height: 36.49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  left: 37px;
+  bottom: 310px;
+}
+
+.card-button > p {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-background-photo {
+  position: relative;
+  max-width: 547px;
+  height: 367.41px;
+}
+
+.card-background-photo > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1204px;
+  height: 368px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin-left: 108px;
+  margin-right: 108px;
+}
+
+.information-content {
+  margin-left: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.photo-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding-right: 104px;
+}
+
+.photo-name2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+}
+
+.photo-name2 > p {
+  color: #bcbcbc;
+  font-size: 14px;
+}
+
+.photo-name > p {
+  color: #bcbcbc;
+  font-size: 14px;
+}
+
+.p-text {
+  width: 566.5px;
+  height: 73px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 140px;
+}
+
+.h3-title {
+  width: 566.5px;
+  height: 73px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 140px;
+}
+
+.h3-title > h3 {
+  font-size: 26px;
+  color: #262626;
+  font-weight: 700;
+}
+
+.p-text > p {
+  font-size: 15.9px;
+  font-weight: 400;
+  color: #262626;
+}
+
+.read-more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25.17px;
+}
+
+.read-more > a {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.24em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+  color: #4ce0d7;
+}
+
+.read-more > a:hover {
+  background-image: linear-gradient(90deg, #4ce0d7 43.06%, #8ba9f4 100%);
+  color: transparent;
+  background-clip: text;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/*ქარდების სექციის სტილების დასრულება*/
+
+/*fashion-section სტილები-დასაწყისი*/
+
+.fashion-container {
+  max-width: 1204px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 6px 6px 0px #0000000d;
+  border-radius: 20px;
+}
+
+.fashion-section span {
+  display: flex;
+  max-width: 1267px;
+  height: 1px;
+  margin: 0 auto;
+  margin-bottom: 52.5px;
+  color: #bcbcbc;
+  border: solid 1px;
+}
+
+.fashion-photo {
+  background: url(Assets/images/fashion-section-main-photo.png);
+  max-width: 1204px;
+  height: 360.3px;
+  margin: 0 auto 24px;
+  background-size: cover;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+/*fashion-section ღილაკი*/
+.fashion-button {
+  width: 233.95px;
+  height: 36.49px;
+  border-radius: 40px;
+  background: #262626;
+  margin: 24px 0 0 48px;
+}
+
+.fashion-button a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+
+/*ჰოვერი fashion-section ღილაკისათვის*/
+
+.fashion-button:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.fashion-content-first-line {
+  max-width: 1022px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+}
+
+.fashion-content-first-line h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.24em;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: #f25e5e;
+  margin-left: 327px;
+}
+
+.fashion-content-first-line h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration-skip-ink: none;
+  color: #bcbcbc;
+  margin-right: 127px;
+}
+
+.fashion-content-first-line img {
+  margin-right: 21px;
+}
+
+.fashion-main-text {
+  max-width: 1022px;
+  margin: 0 auto;
+}
+
+.fashion-content-text {
+  max-width: 784px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 97px;
+}
+
+.fashion-content-text h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: #262626;
+  margin-bottom: 23px;
+}
+
+.fashion-content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: #262626;
+  margin-bottom: 30px;
+}
+.read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  margin: 30px 0 32px;
+}
+
+.read p:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.read p a:hover {
+  background-image: linear-gradient(90deg, #4ce0d7 43.06%, #8ba9f4 100%);
+  color: transparent;
+  background-clip: text;
+}
+
+.read a {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.24em;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: #4ce0d7;
+  text-decoration: none;
+}
+
+.read img {
+  padding: 13px 14px 13px 0;
+}
+
+/* fashion section პატარა ეკრანებისათვის*/
+@media (max-width: 768px) {
+  /* Fashion სექციის მთავარი ფოტო */
+  .fashion-photo {
+    width: 100%;
+    height: auto;
+    min-height: 200px; /* მინიმალური სიმაღლე */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+
+  /* Fashion Section */
+  .fashion-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+  }
+
+  .fashion-content-first-line {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .fashion-content-text {
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+  .fashion-content-text h3 {
+    text-align: center;
+  }
+
+  .fashion-button {
+    width: auto;
+    margin: 24px 0 0 48px;
+    padding: 0 20px 0;
+  }
+
+  .fashion-button a {
+    font-size: 12px;
+  }
+}
+
+/*აქ დაიწყო ტრენდინგ სექცია*/
+.trending-text {
+  display: flex;
+  max-width: 1204px;
+  justify-content: start;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+
+.trending-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.trending1 {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1204px;
+  gap: 60px;
+}
+
+.main-trending1,
+.main-trending2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 6px 6px 0px #0000000d;
+  margin-bottom: 88.2px;
+}
+
+.card-trending1 {
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 579.02px;
+  height: 278.09px;
+}
+
+.card-trending2 {
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 565px;
+  height: 278.09px;
+}
+
+.a-button1 > a,
+.a-button2 > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.a-button1,
+.a-button2 {
+  background-color: #262626;
+  padding: 9px 49px;
+  border-radius: 40px;
+  margin: 20px 0px 0 34px;
+}
+
+.a-button1:hover,
+.a-button2:hover {
+  transform: scale(1.1);
+}
+
+.card-trending1 {
+  background-image: url(Assets/images/photo1.png);
+  margin-bottom: 23px;
+}
+
+.card-trending2 {
+  background-image: url(Assets/images/photo4.png);
+  margin-bottom: 23px;
+}
+
+.trending-card1,
+.trending-card2 {
+  max-width: 448px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 34px;
+  margin-bottom: 20px;
+}
+
+.trending-card1 > img,
+.trending-card2 > img {
+  width: 65.67px;
+  height: 50.77px;
+}
+
+.trending-card1 > p,
+.trending-card2 > p {
+  width: 169px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #bcbcbc;
+}
+
+.trending-content1,
+.trending-content2 {
+  max-width: 354px;
+  margin-left: 34px;
+  margin-bottom: 20px;
+}
+
+.trending-button1,
+.trending-button2 {
+  display: flex;
+  text-decoration: none;
+  background-color: #ffffff;
+  max-width: 132px;
+  align-items: center;
+  margin-left: 34px;
+  margin-bottom: 20px;
+}
+
+.trending-button1 > a,
+.trending-button2 > a {
+  text-decoration: none;
+  color: #4ce0d7;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 16px;
+  align-items: center;
+}
+
+/*fashion-content სტილები შემცირებული ეკრანისათვის*/
+
+@media (max-width: 768px) {
+  .fashion-section,
+  .fashion-main-text {
+    padding: 0 20px;
+  }
+
+  .fashion-content-first-line h4,
+  .fashion-content-first-line h5,
+  .fashion-content-first-line img {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+}
+
+/*ფუთერის დასაწყისი*/
+footer {
+  max-width: 1440px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 20px 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  max-width: 1267px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 87px;
+}
+
+.hang-out {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+
+.lets-hang {
+  margin-right: 43px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+footer span {
+  display: flex;
+  max-width: 1267px;
+  height: 1px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  color: #bcbcbc;
+  border: solid 1px;
+  margin-top: 77px;
+}
+
+.email {
+  display: flex;
+  max-width: 1267px;
+  margin: 0 auto;
+  padding-bottom: 34px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover,
+.youtube:hover,
+.instagram:hover {
+  transform: scale(1.2)
+}
